@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +20,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveForward();
+        
+    }
 
+    void MoveForward()
+    {
         //This is where we get player input
         forwardInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
@@ -30,4 +36,5 @@ public class PlayerController : MonoBehaviour
         //We move turn the vehicle 
         transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     }
+
 }
