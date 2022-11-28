@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.IO;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public float turnSpeed = 60.0f;
+    public float turnSpeed { get; set; } = 60.0f; //ENCAPSULATION
     public float horizontalInput;
     public float forwardInput;
 
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveForward();
+        MoveForward(); // ABSTRACTION
         
     }
 

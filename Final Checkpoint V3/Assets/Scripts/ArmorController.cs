@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmorController : PlayerController
+public class ArmorController : PlayerController //INHERITANCE
 {
-    public override void MoveForward()
+    public override void MoveForward() //POLYMORPHISM
     {
         speed = 5.0f;
         //This is where we get player input

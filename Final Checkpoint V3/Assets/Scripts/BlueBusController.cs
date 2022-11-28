@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlueBusController : PlayerController
+public class BlueBusController : PlayerController //INHERITANCE
 {
-    public override void MoveForward()
+    public override void MoveForward() //POLYMORPHISM
     {
         speed = 20.0f;
         //This is where we get player input
