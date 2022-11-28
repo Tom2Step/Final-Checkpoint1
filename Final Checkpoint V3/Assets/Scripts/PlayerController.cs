@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5.0f;
-    [SerializeField] private float turnSpeed;
-    [SerializeField] private float horizontalInput;
-    [SerializeField] private float forwardInput;
+    private float speed = 20.0f;
+    private float turnSpeed = 60.0f;
+    private float horizontalInput;
+    private float forwardInput;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void MoveForward()
+    public virtual void MoveForward()
     {
         //This is where we get player input
         forwardInput = Input.GetAxis("Vertical");
