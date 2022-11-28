@@ -1,32 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class BlueBusController : PlayerController
 {
-    public float speed;
-    public float turnSpeed = 60.0f;
-    public float horizontalInput;
-    public float forwardInput;
-
-    // Start is called before the first frame update
-    void Start()
+    public override void MoveForward()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        MoveForward();
-        
-    }
-
-    public virtual void MoveForward()
-    {
-        speed = 30.0f;
+        speed = 20.0f;
         //This is where we get player input
         forwardInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");

@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class TargetCamera : MonoBehaviour
 {
-    public float speed;
-    public float turnSpeed = 60.0f;
-    public float horizontalInput;
-    public float forwardInput;
+    private float speed;
+    private float turnSpeed = 60.0f;
+    private float horizontalInput;
+    private float forwardInput;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +19,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MoveForward();
-        
+
     }
 
     public virtual void MoveForward()
     {
-        speed = 30.0f;
+
         //This is where we get player input
         forwardInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
@@ -38,4 +36,19 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     }
 
+    public void RedTruckSpeed()
+    {
+        speed = 30.0f;
+    }
+
+    public void BlueBusSpeed()
+    {
+        speed = 20.0f;
+    }
+
+    public void ArmourTruckSpeed()
+    {
+        speed = 5.0f;
+
+    }
 }
